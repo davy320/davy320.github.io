@@ -1,0 +1,195 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.pdf-viewer {
+  display: block;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-width: 600px;
+}
+
+/* Tooltip styles */
+.tooltip {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth fade-in */
+}
+
+.fade-in {
+  animation: fadein-movedown 1s ease-out forwards;
+}
+
+.fade-out {
+  animation: fadeout-moveup 1s ease-out forwards;
+}
+
+@keyframes fadeout-moveup {
+  0% {
+    opacity: 1;
+    transform: translateY(0); /* No movement initially */
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateY(-30px); /* Move the tooltip up as it fades */
+  }
+}
+
+@keyframes fadein-movedown {
+  0% {
+    opacity: 0.2;
+    transform: translateY(-30px); /* No movement initially */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); /* Move the tooltip up as it fades */
+  }
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  max-width: 100%;
+  min-width: 600px;
+  height: auto;
+}
+
+.nav-links {
+  position: fixed;
+  top: 264px;
+  min-width: 120px;
+  font-size: 16px;
+  right: 40px;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+/* Zoom for screens between 1000px and 1199px */
+@media (max-width: 1199px) {
+  #nav-links {
+    top: 264px;
+    zoom: 90%;
+  }
+}
+
+/* Zoom for screens between 800px and 999px */
+@media (max-width: 999px) {
+  #nav-links {
+    top: 274px;
+    zoom: 80%;
+  }
+}
+
+/* Zoom for screens between 600px and 799px */
+@media (max-width: 799px) {
+  #nav-links {
+    top: 294px;
+    zoom: 70%;
+  }
+}
+
+/* Zoom for screens smaller than 600px (mobile) */
+@media (max-width: 599px) {
+  #nav-links {
+    top: 314px;
+    zoom: 60%;
+  }
+
+  .tooltip {
+    font-size: small;
+  }
+}
+
+.nav-links a {
+  display: block;
+  margin: 10px 0;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.nav-button {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+.nav-button i {
+  font-size: 24px;
+}
+
+.nav-links {
+  display: none;
+  right: 20px;
+}
+
+.nav-button {
+  display: block;
+}
+
+.nav-links.show {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.projects-section a {
+  text-decoration: none;
+}
+
+.projects-section a:hover {
+  color: #007bff;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+}
+
+.project-link i {
+  min-width: 24px;
+  margin-right: 4px;
+}
+
+@media (min-width: 1100px) {
+  .nav-button {
+    right: 220px;
+  }
+
+  .nav-links {
+    right: 220px;
+  }
+}
