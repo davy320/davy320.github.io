@@ -24,7 +24,7 @@ canvas {
 
 .nav-links {
     position: fixed;
-    top: 214px;
+    top: 264px;
     min-width: 120px;
     font-size: 16px;
     right: 40px;
@@ -34,6 +34,34 @@ canvas {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     z-index: 1000;
+}
+
+/* Zoom for screens between 1000px and 1199px */
+@media (max-width: 1199px) {
+    #nav-links {
+        zoom: 90%;
+    }
+}
+
+/* Zoom for screens between 800px and 999px */
+@media (max-width: 999px) {
+    #nav-links {
+        zoom: 80%;
+    }
+}
+
+/* Zoom for screens between 600px and 799px */
+@media (max-width: 799px) {
+    #nav-links {
+        zoom: 70%;
+    }
+}
+
+/* Zoom for screens smaller than 600px (mobile) */
+@media (max-width: 599px) {
+    #nav-links {
+        zoom: 60%;
+    }
 }
 
 .nav-links a {
