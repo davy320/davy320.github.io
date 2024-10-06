@@ -39,6 +39,7 @@ canvas {
 /* Zoom for screens between 1000px and 1199px */
 @media (max-width: 1199px) {
     #nav-links {
+        top: 264px;
         zoom: 90%;
     }
 }
@@ -46,6 +47,7 @@ canvas {
 /* Zoom for screens between 800px and 999px */
 @media (max-width: 999px) {
     #nav-links {
+        top: 274px;
         zoom: 80%;
     }
 }
@@ -53,6 +55,7 @@ canvas {
 /* Zoom for screens between 600px and 799px */
 @media (max-width: 799px) {
     #nav-links {
+        top: 294px;
         zoom: 70%;
     }
 }
@@ -60,6 +63,7 @@ canvas {
 /* Zoom for screens smaller than 600px (mobile) */
 @media (max-width: 599px) {
     #nav-links {
+        top: 314px;
         zoom: 60%;
     }
 }
